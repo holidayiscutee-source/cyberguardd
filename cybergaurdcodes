@@ -1,0 +1,1597 @@
+<!DOCTYPE html> <html lang="en" class="scroll-smooth"><head><meta name="x-poe-datastore-behavior" content="local_only"><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Cybersecurity Guide - Protecting Your Digital World</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cyber-blue': '#1E40AF',
+                        'cyber-teal': '#0891B2',
+                        'cyber-dark': '#1E3A8A',
+                        'cyber-light': '#EFF6FF'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(0, 102, 204, 0.3); }
+            50% { box-shadow: 0 0 30px rgba(0, 102, 204, 0.6); }
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .float-animation { animation: float 3s ease-in-out infinite; }
+        .pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+        .slide-in { animation: slideIn 0.6s ease-out; }
+        .threat-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+    </style>
+<script src="https://puc.poecdn.net/authenticated_preview_page/syncedState.bd4eeeb8e8e02052ee92.js"></script></head>
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300">
+
+    <!-- Dark Mode Detection Script -->
+    <script>
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+    </script>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-shield-alt text-cyber-blue text-2xl"></i>
+                    <h1 class="text-xl font-bold text-cyber-blue">CyberGuard</h1>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#overview" class="hover:text-cyber-blue transition-colors">Overview</a>
+                    <a href="#facts" class="hover:text-cyber-blue transition-colors">Hidden Facts</a>
+                    <a href="#threats" class="hover:text-cyber-blue transition-colors">Threats</a>
+                    <a href="#practices" class="hover:text-cyber-blue transition-colors">Best Practices</a>
+                    <a href="#game" class="hover:text-cyber-blue transition-colors">Interactive Game</a>
+                    <a href="#learning-hubs" class="hover:text-cyber-blue transition-colors">Learning Hubs</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-20 pb-16 bg-gradient-to-br from-cyber-light to-white dark:from-gray-800 dark:to-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="float-animation mb-6">
+                <i class="fas fa-shield-alt text-6xl text-cyber-blue mb-2"></i>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyber-blue to-cyber-teal bg-clip-text text-transparent">
+                Cybersecurity Essentials
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
+                Learn how to protect yourself and your organization from digital threats in today's connected world
+            </p>
+            <div class="flex justify-center items-center space-x-4 text-lg flex-wrap gap-4">
+                <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm px-6 py-3 rounded-lg border border-gray-200 dark:border-gray-600 shadow-lg">
+                    <i class="fas fa-graduation-cap text-cyber-blue mr-2"></i>
+                    <span class="font-medium">Easy to Learn</span>
+                </div>
+                <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm px-6 py-3 rounded-lg border border-gray-200 dark:border-gray-600 shadow-lg">
+                    <i class="fas fa-gamepad text-cyber-teal mr-2"></i>
+                    <span class="font-medium">Interactive</span>
+                </div>
+                <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm px-6 py-3 rounded-lg border border-gray-200 dark:border-gray-600 shadow-lg">
+                    <i class="fas fa-briefcase text-cyber-dark mr-2"></i>
+                    <span class="font-medium">Professional</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI in Cybersecurity Hero -->
+    <section class="py-16 bg-gradient-to-br from-blue-900 to-purple-900 relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/30"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6">
+                        AI-Powered Cybersecurity
+                    </h2>
+                    <p class="text-xl mb-8 text-blue-100">
+                        The future of digital protection combines artificial intelligence with human expertise to defend against evolving cyber threats.
+                    </p>
+                    <div class="flex space-x-4">
+                        <button onclick="toggleAIChat()" class="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-all duration-300 font-semibold">
+                            <i class="fas fa-robot mr-2"></i>Chat with AI Assistant
+                        </button>
+                        <a href="#learning-hubs" class="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-blue-900 transition-all duration-300 font-semibold">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://360advanced.com/wp-content/uploads/2025/02/AI-cybersecurity-blog-image.jpg" alt="AI Cybersecurity" class="rounded-xl shadow-2xl w-full h-auto">
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent rounded-xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is Cybersecurity Section -->
+    <section id="overview" class="py-16 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-cyber-dark dark:text-white">
+                    What is Cybersecurity All About?
+                </h2>
+                <div class="w-24 h-1 bg-cyber-blue mx-auto mb-8"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                        Cybersecurity is the practice of protecting digital systems, networks, and data from malicious attacks, unauthorized access, and cyber threats. It encompasses technologies, processes, and practices designed to safeguard our increasingly connected digital world.
+                    </p>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                        In today's digital age, cybersecurity is crucial for protecting personal information, business data, financial assets, and critical infrastructure. With cyber attacks becoming more sophisticated and frequent, understanding cybersecurity principles is essential for everyone.
+                    </p>
+                    <div class="bg-cyber-light dark:bg-gray-800 p-6 rounded-lg border-l-4 border-cyber-blue">
+                        <h3 class="font-bold text-cyber-dark dark:text-white mb-2">Why It Matters:</h3>
+                        <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                            <li><i class="fas fa-check text-cyber-blue mr-2"></i>Protects sensitive personal and business data</li>
+                            <li><i class="fas fa-check text-cyber-blue mr-2"></i>Prevents financial losses from cyber crimes</li>
+                            <li><i class="fas fa-check text-cyber-blue mr-2"></i>Maintains business continuity and reputation</li>
+                            <li><i class="fas fa-check text-cyber-blue mr-2"></i>Ensures compliance with data protection regulations</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="text-center p-6 bg-gradient-to-br from-cyber-light to-white dark:from-gray-800 dark:to-gray-700 rounded-lg shadow-lg">
+                        <div class="float-animation">
+                            <i class="fas fa-lock text-4xl text-cyber-blue mb-4"></i>
+                        </div>
+                        <h3 class="font-bold text-cyber-dark dark:text-white">Data Protection</h3>
+                    </div>
+                    <div class="text-center p-6 bg-gradient-to-br from-cyber-light to-white dark:from-gray-800 dark:to-gray-700 rounded-lg shadow-lg">
+                        <div class="float-animation" style="animation-delay: 0.5s;">
+                            <i class="fas fa-network-wired text-4xl text-cyber-teal mb-4"></i>
+                        </div>
+                        <h3 class="font-bold text-cyber-dark dark:text-white">Network Security</h3>
+                    </div>
+                    <div class="text-center p-6 bg-gradient-to-br from-cyber-light to-white dark:from-gray-800 dark:to-gray-700 rounded-lg shadow-lg">
+                        <div class="float-animation" style="animation-delay: 1s;">
+                            <i class="fas fa-mobile-alt text-4xl text-cyber-blue mb-4"></i>
+                        </div>
+                        <h3 class="font-bold text-cyber-dark dark:text-white">Device Security</h3>
+                    </div>
+                    <div class="text-center p-6 bg-gradient-to-br from-cyber-light to-white dark:from-gray-800 dark:to-gray-700 rounded-lg shadow-lg">
+                        <div class="float-animation" style="animation-delay: 1.5s;">
+                            <i class="fas fa-cloud text-4xl text-cyber-teal mb-4"></i>
+                        </div>
+                        <h3 class="font-bold text-cyber-dark dark:text-white">Cloud Security</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hidden Cybersecurity Facts Section -->
+    <section id="facts" class="py-16 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-cyber-dark dark:text-white">
+                    Hidden Cybersecurity Truths
+                </h2>
+                <div class="w-24 h-1 bg-cyber-blue mx-auto mb-8"></div>
+                <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Discover shocking cybersecurity facts and advanced threats that most people never hear about
+                </p>
+            </div>
+
+            <!-- Shocking Statistics -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-cyber-dark dark:text-white mb-8 text-center">Shocking Statistics You Probably Don't Know</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg text-center border border-gray-200 dark:border-gray-600">
+                        <div class="text-4xl font-bold text-red-500 mb-2">39</div>
+                        <div class="text-sm text-gray-600 dark:text-gray-300">seconds</div>
+                        <div class="text-xs text-gray-500 dark:text-gray-400 mt-2">Average time between cyberattacks globally</div>
+                    </div>
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg text-center border border-gray-200 dark:border-gray-600">
+                        <div class="text-4xl font-bold text-orange-500 mb-2">95%</div>
+                        <div class="text-sm text-gray-600 dark:text-gray-300">human error</div>
+                        <div class="text-xs text-gray-500 dark:text-gray-400 mt-2">Of successful cyber attacks are due to human mistakes</div>
+                    </div>
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg text-center border border-gray-200 dark:border-gray-600">
+                        <div class="text-4xl font-bold text-purple-500 mb-2">300</div>
+                        <div class="text-sm text-gray-600 dark:text-gray-300">days average</div>
+                        <div class="text-xs text-gray-500 dark:text-gray-400 mt-2">Time to detect a data breach after it occurs</div>
+                    </div>
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg text-center border border-gray-200 dark:border-gray-600">
+                        <div class="text-4xl font-bold text-blue-500 mb-2">$10M</div>
+                        <div class="text-sm text-gray-600 dark:text-gray-300">average cost</div>
+                        <div class="text-xs text-gray-500 dark:text-gray-400 mt-2">Average cost of a data breach in 2024</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advanced Threats -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-cyber-dark dark:text-white mb-8 text-center">Advanced Threats Most People Haven't Heard Of</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Living off the Land -->
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-600">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-leaf text-2xl text-green-500 mr-3"></i>
+                            <h4 class="text-lg font-bold text-cyber-dark dark:text-white">Living Off The Land</h4>
+                        </div>
+                        <p class="text-sm text-gray-600 dark:text-gray-300">
+                            Hackers use legitimate system tools (PowerShell, WMI, etc.) to conduct attacks, making detection nearly impossible since they're using "trusted" software already on your computer.
+                        </p>
+                    </div>
+
+                    <!-- Supply Chain Poisoning -->
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-600">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-industry text-2xl text-red-500 mr-3"></i>
+                            <h4 class="text-lg font-bold text-cyber-dark dark:text-white">Supply Chain Poisoning</h4>
+                        </div>
+                        <p class="text-sm text-gray-600 dark:text-gray-300">
+                            Attackers compromise software before it reaches you by infiltrating the development process itself. The SolarWinds attack affected 18,000+ organizations this way.
+                        </p>
+                    </div>
+
+                    <!-- Typosquatting -->
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-600">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-keyboard text-2xl text-orange-500 mr-3"></i>
+                            <h4 class="text-lg font-bold text-cyber-dark dark:text-white">Typosquatting</h4>
+                        </div>
+                        <p class="text-sm text-gray-600 dark:text-gray-300">
+                            Cybercriminals register domains with common typos (googel.com, amazom.com) to catch users who mistype URLs and steal their credentials.
+                        </p>
+                    </div>
+
+                    <!-- Watering Hole Attacks -->
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-600">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-tint text-2xl text-blue-500 mr-3"></i>
+                            <h4 class="text-lg font-bold text-cyber-dark dark:text-white">Watering Hole Attacks</h4>
+                        </div>
+                        <p class="text-sm text-gray-600 dark:text-gray-300">
+                            Hackers compromise websites frequently visited by their target group, then infect visitors' computers. Like poisoning a watering hole to catch animals.
+                        </p>
+                    </div>
+
+                    <!-- Fileless Malware -->
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-600">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-ghost text-2xl text-purple-500 mr-3"></i>
+                            <h4 class="text-lg font-bold text-cyber-dark dark:text-white">Fileless Malware</h4>
+                        </div>
+                        <p class="text-sm text-gray-600 dark:text-gray-300">
+                            Malware that exists only in memory and never writes files to disk, making it invisible to traditional antivirus software that scans files.
+                        </p>
+                    </div>
+
+                    <!-- DNS Tunneling -->
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-600">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-tunnel text-2xl text-teal-500 mr-3"></i>
+                            <h4 class="text-lg font-bold text-cyber-dark dark:text-white">DNS Tunneling</h4>
+                        </div>
+                        <p class="text-sm text-gray-600 dark:text-gray-300">
+                            Attackers hide malicious traffic inside DNS requests (which are rarely monitored) to communicate with compromised systems and steal data.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mind-Blowing Facts -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-cyber-dark dark:text-white mb-8 text-center">Mind-Blowing Cybersecurity Facts</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="space-y-6">
+                        <div class="bg-gradient-to-r from-red-50 to-red-100 dark:from-red-900/20 dark:to-red-800/20 p-6 rounded-lg border border-red-200 dark:border-red-700">
+                            <h4 class="font-bold text-red-700 dark:text-red-300 mb-2">The Password "123456" is Still #1</h4>
+                            <p class="text-sm text-gray-700 dark:text-gray-300">Despite decades of warnings, "123456" remains the most commonly used password globally, followed by "password" and "123456789".</p>
+                        </div>
+
+                        <div class="bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 p-6 rounded-lg border border-blue-200 dark:border-blue-700">
+                            <h4 class="font-bold text-blue-700 dark:text-blue-300 mb-2">Your Smart Fridge Can Be Hacked</h4>
+                            <p class="text-sm text-gray-700 dark:text-gray-300">IoT devices like smart fridges, thermostats, and light bulbs are often used to launch massive DDoS attacks because they have weak security.</p>
+                        </div>
+
+                        <div class="bg-gradient-to-r from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 p-6 rounded-lg border border-green-200 dark:border-green-700">
+                            <h4 class="font-bold text-green-700 dark:text-green-300 mb-2">Cybercrime Pays More Than Drugs</h4>
+                            <p class="text-sm text-gray-700 dark:text-gray-300">Cybercrime is now more profitable than the global illegal drug trade, with estimated damages of over $8 trillion annually.</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="bg-gradient-to-r from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 p-6 rounded-lg border border-purple-200 dark:border-purple-700">
+                            <h4 class="font-bold text-purple-700 dark:text-purple-300 mb-2">USB Drops Have 68% Success Rate</h4>
+                            <p class="text-sm text-gray-700 dark:text-gray-300">When hackers drop infected USB drives in parking lots, 68% of people will plug them into their computers, and 90% will do so if it has a company logo.</p>
+                        </div>
+
+                        <div class="bg-gradient-to-r from-yellow-50 to-yellow-100 dark:from-yellow-900/20 dark:to-yellow-800/20 p-6 rounded-lg border border-yellow-200 dark:border-yellow-700">
+                            <h4 class="font-bold text-yellow-700 dark:text-yellow-300 mb-2">AI Can Crack Passwords by Sound</h4>
+                            <p class="text-sm text-gray-700 dark:text-gray-300">AI can now identify keystrokes with 95% accuracy just by listening to the sound of typing, potentially revealing passwords through microphones.</p>
+                        </div>
+
+                        <div class="bg-gradient-to-r from-indigo-50 to-indigo-100 dark:from-indigo-900/20 dark:to-indigo-800/20 p-6 rounded-lg border border-indigo-200 dark:border-indigo-700">
+                            <h4 class="font-bold text-indigo-700 dark:text-indigo-300 mb-2">Dark Web Markets Accept Returns</h4>
+                            <p class="text-sm text-gray-700 dark:text-gray-300">Some dark web marketplaces operate like legitimate businesses, offering customer service, money-back guarantees, and even product reviews.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Unknown Vulnerabilities -->
+            <div>
+                <h3 class="text-2xl font-bold text-cyber-dark dark:text-white mb-8 text-center">Vulnerabilities Hiding in Plain Sight</h3>
+                <div class="bg-gradient-to-r from-cyber-blue/10 to-cyber-teal/10 dark:from-cyber-blue/20 dark:to-cyber-teal/20 p-8 rounded-lg border border-cyber-blue/20 dark:border-cyber-blue/30">
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <i class="fas fa-wifi text-3xl text-cyber-blue mb-3"></i>
+                            <h4 class="font-bold text-cyber-dark dark:text-white mb-2">WiFi SSIDs as Weapons</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-300">Malicious WiFi network names can crash iPhones and Android devices without connecting to them.</p>
+                        </div>
+                        <div class="text-center">
+                            <i class="fas fa-microchip text-3xl text-cyber-teal mb-3"></i>
+                            <h4 class="font-bold text-cyber-dark dark:text-white mb-2">Hardware Backdoors</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-300">Microscopic chips smaller than rice grains can be secretly added to circuit boards during manufacturing.</p>
+                        </div>
+                        <div class="text-center">
+                            <i class="fas fa-eye text-3xl text-purple-500 mb-3"></i>
+                            <h4 class="font-bold text-cyber-dark dark:text-white mb-2">Screen Light Spying</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-300">Attackers can reconstruct what's on your screen by analyzing light reflections in your eyes through webcam footage.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI vs Human Security -->
+    <section class="py-16 bg-gradient-to-r from-gray-100 to-blue-50 dark:from-gray-800 dark:to-gray-900 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <img src="https://focus.namirial.com/en/wp-content/uploads/sites/4/2023/06/ai-in-cybersecurity.jpeg" alt="AI in Cybersecurity" class="rounded-xl shadow-2xl w-full h-auto">
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-600/30 to-transparent rounded-xl"></div>
+                </div>
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-cyber-dark dark:text-white">
+                        Human + AI Security Alliance
+                    </h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
+                        The most effective cybersecurity strategy combines human intelligence with AI-powered automation to detect, prevent, and respond to threats in real-time.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-blue-500 p-2 rounded-full mr-4 mt-1">
+                                <i class="fas fa-brain text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800 dark:text-white">Human Intelligence</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-300">Strategic thinking, context understanding, and complex decision-making</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-purple-500 p-2 rounded-full mr-4 mt-1">
+                                <i class="fas fa-robot text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800 dark:text-white">AI Automation</h3>
+                                <p class="text-sm text-gray-600 dark:text-gray-300">24/7 monitoring, pattern recognition, and instant threat response</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Threats Section -->
+    <section id="threats" class="py-16 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-cyber-dark dark:text-white">
+                    Types of Cybersecurity Threats
+                </h2>
+                <div class="w-24 h-1 bg-cyber-blue mx-auto mb-8"></div>
+                <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Understanding common cyber threats is the first step in protecting yourself and your organization
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Phishing -->
+                <div class="threat-card bg-gradient-to-br from-red-50 to-red-100 dark:from-red-900/20 dark:to-red-800/20 p-6 rounded-lg shadow-lg border border-red-200 dark:border-red-700">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-fish text-4xl text-red-500 mb-4 float-animation"></i>
+                        <h3 class="text-xl font-bold text-red-700 dark:text-red-300">Phishing</h3>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300 text-sm">
+                        Fraudulent attempts to obtain sensitive information by disguising as a trustworthy entity in electronic communications, typically through fake emails or websites.
+                    </p>
+                </div>
+
+                <!-- Ransomware -->
+                <div class="threat-card bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900/20 dark:to-orange-800/20 p-6 rounded-lg shadow-lg border border-orange-200 dark:border-orange-700">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-lock text-4xl text-orange-500 mb-4 float-animation" style="animation-delay: 0.2s;"></i>
+                        <h3 class="text-xl font-bold text-orange-700 dark:text-orange-300">Ransomware</h3>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300 text-sm">
+                        Malicious software that encrypts files and demands payment for decryption. Can paralyze entire organizations and cause significant financial losses.
+                    </p>
+                </div>
+
+                <!-- Malware -->
+                <div class="threat-card bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 p-6 rounded-lg shadow-lg border border-purple-200 dark:border-purple-700">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-virus text-4xl text-purple-500 mb-4 float-animation" style="animation-delay: 0.4s;"></i>
+                        <h3 class="text-xl font-bold text-purple-700 dark:text-purple-300">Malware</h3>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300 text-sm">
+                        Malicious software designed to damage, disrupt, or gain unauthorized access to computer systems. Includes viruses, worms, trojans, and spyware.
+                    </p>
+                </div>
+
+                <!-- Data Breaches -->
+                <div class="threat-card bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 p-6 rounded-lg shadow-lg border border-blue-200 dark:border-blue-700">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-database text-4xl text-blue-500 mb-4 float-animation" style="animation-delay: 0.6s;"></i>
+                        <h3 class="text-xl font-bold text-blue-700 dark:text-blue-300">Data Breaches</h3>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300 text-sm">
+                        Unauthorized access to confidential data, often resulting in theft of personal information, financial records, or trade secrets.
+                    </p>
+                </div>
+
+                <!-- Social Engineering -->
+                <div class="threat-card bg-gradient-to-br from-yellow-50 to-yellow-100 dark:from-yellow-900/20 dark:to-yellow-800/20 p-6 rounded-lg shadow-lg border border-yellow-200 dark:border-yellow-700">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-users text-4xl text-yellow-500 mb-4 float-animation" style="animation-delay: 0.8s;"></i>
+                        <h3 class="text-xl font-bold text-yellow-700 dark:text-yellow-300">Social Engineering</h3>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300 text-sm">
+                        Psychological manipulation tactics used to trick people into divulging confidential information or performing actions that compromise security.
+                    </p>
+                </div>
+
+                <!-- Insider Threats -->
+                <div class="threat-card bg-gradient-to-br from-indigo-50 to-indigo-100 dark:from-indigo-900/20 dark:to-indigo-800/20 p-6 rounded-lg shadow-lg border border-indigo-200 dark:border-indigo-700">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-user-secret text-4xl text-indigo-500 mb-4 float-animation" style="animation-delay: 1s;"></i>
+                        <h3 class="text-xl font-bold text-indigo-700 dark:text-indigo-300">Insider Threats</h3>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300 text-sm">
+                        Security risks that come from people within the organization, whether through malicious intent, negligence, or compromised credentials.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Practices Section -->
+    <section id="practices" class="py-16 bg-cyber-light dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-cyber-dark dark:text-white">
+                    Best Practices for Cybersecurity
+                </h2>
+                <div class="w-24 h-1 bg-cyber-blue mx-auto mb-8"></div>
+                <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Implement these essential security measures to protect yourself and your organization
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Strong Passwords -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-600">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-cyber-blue/10 p-3 rounded-full mr-4">
+                            <i class="fas fa-key text-cyber-blue text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-cyber-dark dark:text-white">Strong Passwords</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Use 12+ characters with mixed case, numbers, symbols</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Unique password for each account</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Consider using a password manager</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Avoid personal information in passwords</li>
+                    </ul>
+                </div>
+
+                <!-- Multi-Factor Authentication -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-600">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-cyber-teal/10 p-3 rounded-full mr-4">
+                            <i class="fas fa-shield-alt text-cyber-teal text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-cyber-dark dark:text-white">Multi-Factor Authentication</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Enable 2FA on all critical accounts</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Use authenticator apps over SMS</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Keep backup codes secure</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Consider hardware security keys</li>
+                    </ul>
+                </div>
+
+                <!-- Software Updates -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-600">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-500/10 p-3 rounded-full mr-4">
+                            <i class="fas fa-sync-alt text-green-500 text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-cyber-dark dark:text-white">Software Updates</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Enable automatic updates when possible</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Update operating systems promptly</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Keep antivirus software current</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Update browser and plugins regularly</li>
+                    </ul>
+                </div>
+
+                <!-- Safe Browsing -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-600">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-500/10 p-3 rounded-full mr-4">
+                            <i class="fas fa-globe text-blue-500 text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-cyber-dark dark:text-white">Safe Browsing</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Verify website URLs before entering data</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Look for HTTPS encryption</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Avoid downloading from untrusted sources</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Use reputable antivirus and ad blockers</li>
+                    </ul>
+                </div>
+
+                <!-- Email Security -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-600">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-red-500/10 p-3 rounded-full mr-4">
+                            <i class="fas fa-envelope-open-text text-red-500 text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-cyber-dark dark:text-white">Recognizing Suspicious Emails</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+                        <li><i class="fas fa-exclamation-triangle text-red-500 mr-2"></i>Check sender addresses carefully</li>
+                        <li><i class="fas fa-exclamation-triangle text-red-500 mr-2"></i>Be wary of urgent or threatening language</li>
+                        <li><i class="fas fa-exclamation-triangle text-red-500 mr-2"></i>Don't click suspicious links or attachments</li>
+                        <li><i class="fas fa-exclamation-triangle text-red-500 mr-2"></i>Verify requests through other channels</li>
+                    </ul>
+                </div>
+
+                <!-- Data Backup -->
+                <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-600">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-500/10 p-3 rounded-full mr-4">
+                            <i class="fas fa-cloud-upload-alt text-purple-500 text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-cyber-dark dark:text-white">Data Backup</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Follow 3-2-1 backup rule</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Test backup restoration regularly</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Store backups offline when possible</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Encrypt sensitive backup data</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Game Section -->
+    <section id="game" class="py-16 bg-white dark:bg-gray-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-cyber-dark dark:text-white">
+                    Interactive Cybersecurity Game
+                </h2>
+                <div class="w-24 h-1 bg-cyber-blue mx-auto mb-8"></div>
+                <p class="text-lg text-gray-600 dark:text-gray-300">
+                    Test your phishing detection skills! Can you identify which emails are legitimate and which are phishing attempts?
+                </p>
+            </div>
+
+            <div class="bg-gradient-to-br from-cyber-light to-white dark:from-gray-800 dark:to-gray-700 p-8 rounded-lg shadow-xl border border-gray-200 dark:border-gray-600">
+                <!-- Game Stats -->
+                <div class="flex justify-between items-center mb-6 p-4 bg-white dark:bg-gray-600 rounded-lg">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-cyber-blue" id="score">0</div>
+                        <div class="text-sm text-gray-600 dark:text-gray-300">Score</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-cyber-teal" id="streak">0</div>
+                        <div class="text-sm text-gray-600 dark:text-gray-300">Streak</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-green-500" id="correct">0</div>
+                        <div class="text-sm text-gray-600 dark:text-gray-300">Correct</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-red-500" id="incorrect">0</div>
+                        <div class="text-sm text-gray-600 dark:text-gray-300">Incorrect</div>
+                    </div>
+                </div>
+
+                <!-- Game Content -->
+                <div id="gameContent" class="min-h-96">
+                    <!-- Start Screen -->
+                    <div id="startScreen" class="text-center">
+                        <div class="mb-8">
+                            <i class="fas fa-gamepad text-6xl text-cyber-blue mb-4"></i>
+                            <h3 class="text-2xl font-bold text-cyber-dark dark:text-white mb-4">Phishing Detection Challenge</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-6">
+                                You'll see various emails. Decide whether each one is <strong>legitimate</strong> or a <strong>phishing attempt</strong>. 
+                                Pay attention to sender addresses, urgency, links, and grammar!
+                            </p>
+                        </div>
+                        <button onclick="startGame()" class="bg-cyber-blue text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-cyber-dark transition-all duration-300 pulse-glow">
+                            Start Game
+                        </button>
+                    </div>
+
+                    <!-- Game Screen -->
+                    <div id="gameScreen" class="hidden">
+                        <div class="bg-white dark:bg-gray-600 rounded-lg p-6 mb-6 shadow-lg">
+                            <div class="border-b border-gray-200 dark:border-gray-500 pb-4 mb-4">
+                                <div class="text-sm text-gray-500 dark:text-gray-400 mb-2">From: <span id="emailFrom" class="font-mono"></span></div>
+                                <div class="text-sm text-gray-500 dark:text-gray-400 mb-2">To: <span id="emailTo" class="font-mono">you@company.com</span></div>
+                                <div class="text-lg font-semibold text-gray-800 dark:text-gray-200" id="emailSubject"></div>
+                            </div>
+                            <div class="text-gray-700 dark:text-gray-300 leading-relaxed" id="emailBody"></div>
+                        </div>
+
+                        <div class="flex justify-center space-x-6">
+                            <button onclick="makeChoice(true)" class="bg-green-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-600 transition-all duration-300 flex items-center">
+                                <i class="fas fa-check mr-2"></i>Legitimate
+                            </button>
+                            <button onclick="makeChoice(false)" class="bg-red-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-600 transition-all duration-300 flex items-center">
+                                <i class="fas fa-times mr-2"></i>Phishing
+                            </button>
+                        </div>
+                    </div>
+                                        <!-- Feedback Screen -->
+                    <div id="feedbackScreen" class="hidden text-center">
+                        <div id="feedbackIcon" class="text-6xl mb-4"></div>
+                        <div id="feedbackTitle" class="text-2xl font-bold mb-4"></div>
+                        <div id="feedbackMessage" class="text-lg text-gray-600 dark:text-gray-300 mb-6"></div>
+                        <button onclick="nextQuestion()" class="bg-cyber-blue text-white px-6 py-2 rounded-lg hover:bg-cyber-dark transition-all duration-300">
+                            Next Question
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Game Logic
+        let gameState = {
+            score: 0,
+            streak: 0,
+            correct: 0,
+            incorrect: 0,
+            currentQuestion: 0
+        };
+
+        const emails = [
+            {
+                from: "security@paypal.com",
+                subject: "Account Security Update Required",
+                body: "Dear Valued Customer,<br><br>We've detected unusual activity on your PayPal account. Please verify your identity immediately by clicking the link below:<br><br><a href='https://paypal-security-verify.com/login' style='color: #0066cc;'>Verify Account Now</a><br><br>Failure to verify within 24 hours will result in account suspension.<br><br>Best regards,<br>PayPal Security Team",
+                isLegitimate: false,
+                explanation: "This is a phishing email. Red flags: suspicious domain (paypal-security-verify.com instead of paypal.com), urgent language threatening account suspension, and generic greeting."
+            },
+            {
+                from: "hr@yourcompany.com",
+                subject: "Weekly Team Meeting - Conference Room B",
+                body: "Hi Team,<br><br>Just a reminder that our weekly team meeting is scheduled for Friday at 2:00 PM in Conference Room B.<br><br>Agenda items:<br>• Project status updates<br>• Q3 planning discussion<br>• New employee introductions<br><br>Please bring your project reports.<br><br>Thanks,<br>Sarah Johnson<br>HR Manager",
+                isLegitimate: true,
+                explanation: "This is a legitimate email. It's from your company's HR department, has a reasonable subject, contains normal business content, and doesn't ask for sensitive information."
+            },
+            {
+                from: "noreply@amazon.com",
+                subject: "Your order has shipped!",
+                body: "Dear Customer,<br><br>Great news! Your recent Amazon order #AMZ-789456123 has been shipped and is on its way.<br><br>Tracking Information:<br>Carrier: UPS<br>Tracking Number: 1Z999AA1234567890<br><br>You can track your package at: <a href='https://www.ups.com/track' style='color: #232F3E;'>UPS Tracking</a><br><br>Expected delivery: March 15, 2024<br><br>Thank you for shopping with Amazon!<br><br>The Amazon Team",
+                isLegitimate: true,
+                explanation: "This appears legitimate. It's from Amazon's official domain, contains specific order and tracking information, and links to the official UPS tracking website."
+            },
+            {
+                from: "billing@microsooft.com",
+                subject: "URGENT: Your Microsoft Office subscription expires today!",
+                body: "IMMEDIATE ACTION REQUIRED<br><br>Your Microsoft Office 365 subscription will expire in 2 hours!<br><br>Click here to renew immediately: <a href='http://microsoft-billing-update.net/renew' style='color: red;'>RENEW NOW</a><br><br>If you don't renew, you will lose access to all your documents and emails FOREVER!<br><br>Microsoft Support Team",
+                isLegitimate: false,
+                explanation: "This is clearly phishing. Red flags: misspelled domain (microsooft.com), excessive urgency and caps, suspicious link domain, and threatening language about losing documents forever."
+            },
+            {
+                from: "support@github.com",
+                subject: "Security alert: New sign-in from Chrome on Windows",
+                body: "Hi there,<br><br>We noticed a new sign-in to your GitHub account:<br><br>Device: Chrome on Windows<br>Location: San Francisco, CA, USA<br>Time: March 12, 2024 at 3:45 PM PDT<br><br>If this was you, you can safely ignore this email. If this wasn't you, please secure your account immediately:<br><br><a href='https://github.com/settings/security' style='color: #0366d6;'>Review your account security</a><br><br>Best,<br>The GitHub Team",
+                isLegitimate: true,
+                explanation: "This is legitimate. GitHub sends these security notifications for new sign-ins. The email provides specific details and links to the official GitHub security settings page."
+            },
+            {
+                from: "service@bank-alerts.secure-banking-update.net",
+                subject: "URGENT: Suspicious Activity Detected",
+                body: "ATTENTION: IMMEDIATE ACTION REQUIRED<br><br>We have detected suspicious activity on your account and have temporarily frozen it for your protection.<br><br>Login immediately to verify your identity:<br>Username: ___________<br>Password: ___________<br>Social Security: ___________<br><br><a href='http://secure-banking-update.net/verify' style='color: red; font-weight: bold;'>CLICK HERE TO VERIFY NOW</a><br><br>You have 1 hour before your account is permanently closed.<br><br>Customer Service",
+                isLegitimate: false,
+                explanation: "This is a phishing scam. Major red flags: suspicious domain name, asks for sensitive information like SSN in email, extreme urgency with threats, and poor grammar/formatting."
+            }
+        ];
+
+        function startGame() {
+            gameState = { score: 0, streak: 0, correct: 0, incorrect: 0, currentQuestion: 0 };
+            updateGameStats();
+            document.getElementById('startScreen').classList.add('hidden');
+            document.getElementById('gameScreen').classList.remove('hidden');
+            loadNextEmail();
+        }
+
+        function loadNextEmail() {
+            if (gameState.currentQuestion >= emails.length) {
+                showGameComplete();
+                return;
+            }
+
+            const email = emails[gameState.currentQuestion];
+            document.getElementById('emailFrom').textContent = email.from;
+            document.getElementById('emailSubject').textContent = email.subject;
+            document.getElementById('emailBody').innerHTML = email.body;
+        }
+
+        function makeChoice(userChoice) {
+            const currentEmail = emails[gameState.currentQuestion];
+            const isCorrect = userChoice === currentEmail.isLegitimate;
+            
+            // Update stats
+            if (isCorrect) {
+                gameState.correct++;
+                gameState.score += 10 + gameState.streak;
+                gameState.streak++;
+            } else {
+                gameState.incorrect++;
+                gameState.streak = 0;
+            }
+            
+            updateGameStats();
+            showFeedback(isCorrect, currentEmail);
+        }
+
+        function showFeedback(isCorrect, email) {
+            document.getElementById('gameScreen').classList.add('hidden');
+            document.getElementById('feedbackScreen').classList.remove('hidden');
+
+            const feedbackIcon = document.getElementById('feedbackIcon');
+            const feedbackTitle = document.getElementById('feedbackTitle');
+            const feedbackMessage = document.getElementById('feedbackMessage');
+
+            if (isCorrect) {
+                feedbackIcon.innerHTML = '<i class="fas fa-check-circle text-green-500"></i>';
+                feedbackTitle.textContent = 'Correct!';
+                feedbackTitle.className = 'text-2xl font-bold mb-4 text-green-600 dark:text-green-400';
+            } else {
+                feedbackIcon.innerHTML = '<i class="fas fa-times-circle text-red-500"></i>';
+                feedbackTitle.textContent = 'Incorrect';
+                feedbackTitle.className = 'text-2xl font-bold mb-4 text-red-600 dark:text-red-400';
+            }
+
+            feedbackMessage.textContent = email.explanation;
+        }
+
+        function nextQuestion() {
+            gameState.currentQuestion++;
+            document.getElementById('feedbackScreen').classList.add('hidden');
+            
+            if (gameState.currentQuestion >= emails.length) {
+                showGameComplete();
+            } else {
+                document.getElementById('gameScreen').classList.remove('hidden');
+                loadNextEmail();
+            }
+        }
+
+        function showGameComplete() {
+            const gameContent = document.getElementById('gameContent');
+            const accuracy = gameState.correct / emails.length * 100;
+            
+            gameContent.innerHTML = `
+                <div class="text-center slide-in">
+                    <i class="fas fa-trophy text-6xl text-yellow-500 mb-4"></i>
+                    <h3 class="text-3xl font-bold text-cyber-dark dark:text-white mb-4">Game Complete!</h3>
+                    <div class="bg-white dark:bg-gray-600 p-6 rounded-lg mb-6">
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                            <div>
+                                <div class="text-2xl font-bold text-cyber-blue">${gameState.score}</div>
+                                <div class="text-sm text-gray-600 dark:text-gray-300">Final Score</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-green-500">${gameState.correct}</div>
+                                <div class="text-sm text-gray-600 dark:text-gray-300">Correct</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-red-500">${gameState.incorrect}</div>
+                                <div class="text-sm text-gray-600 dark:text-gray-300">Incorrect</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-cyber-teal">${accuracy.toFixed(0)}%</div>
+                                <div class="text-sm text-gray-600 dark:text-gray-300">Accuracy</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
+                        ${accuracy >= 80 ? "Excellent work! You have strong phishing detection skills." :
+                          accuracy >= 60 ? "Good job! Keep practicing to improve your detection skills." :
+                          "Keep learning! Remember to look for suspicious domains, urgent language, and requests for sensitive information."}
+                    </p>
+                    <button onclick="location.reload()" class="bg-cyber-blue text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-cyber-dark transition-all duration-300">
+                        Play Again
+                    </button>
+                </div>
+            `;
+        }
+
+        function updateGameStats() {
+            document.getElementById('score').textContent = gameState.score;
+            document.getElementById('streak').textContent = gameState.streak;
+            document.getElementById('correct').textContent = gameState.correct;
+            document.getElementById('incorrect').textContent = gameState.incorrect;
+        }
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('slide-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe sections for animations
+        document.querySelectorAll('section > div').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+
+    <!-- Learning Hubs Section -->
+ <section id="learning-hubs" class="py-16 bg-gradient-to-br from-indigo-50 to-purple-100 dark:from-indigo-900/20 dark:to-purple-900/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-cyber-dark dark:text-white">
+                    🎓 Cybersecurity Learning Hubs
+                </h2>
+                <div class="w-24 h-1 bg-cyber-blue mx-auto mb-8"></div>
+                <p class="text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto">
+                    Take your cybersecurity career to the next level with these world-class training programs and certifications from top institutions
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <!-- SANS Institute -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i class="fas fa-shield-alt text-6xl mb-4"></i>
+                            <h3 class="text-2xl font-bold">SANS Institute</h3>
+                            <p class="text-sm opacity-90">World's largest cybersecurity training provider</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="mb-4">
+                            <div class="flex items-center mb-2">
+                                <span class="bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 px-2 py-1 rounded text-xs font-semibold mr-2">FREE ACCESS</span>
+                                <span class="text-gray-500 text-xs">180K+ Alumni</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 dark:text-white mb-2">Cybersecurity Training Community</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-300">Access 1,000+ free cybersecurity resources, live workshops, webinars, and hands-on cyber ranges.</p>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-xs text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-check text-green-500 mr-2"></i>85+ Expert-led courses
+                            </div>
+                            <div class="flex items-center text-xs text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-check text-green-500 mr-2"></i>GIAC certifications
+                            </div>
+                            <div class="flex items-center text-xs text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-check text-green-500 mr-2"></i>Monthly CTF challenges
+                            </div>
+                        </div>
+                        <a href="https://www.sans.org/mlp/cybersecurity-training-community" target="_blank" class="block w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center py-3 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 font-semibold">
+                            <i class="fas fa-external-link-alt mr-2"></i>Join Free Community
+                        </a>
+                    </div>
+                </div>
+
+                <!-- King's College London -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i class="fas fa-university text-6xl mb-4"></i>
+                            <h3 class="text-2xl font-bold">King's College London</h3>
+                            <p class="text-sm opacity-90">#5 in UK, #31 globally (QS Rankings)</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="mb-4">
+                            <div class="flex items-center mb-2">
+                                <span class="bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 px-2 py-1 rounded text-xs font-semibold mr-2">MSc DEGREE</span>
+                                <span class="text-gray-500 text-xs">NCSC Certified</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 dark:text-white mb-2">Advanced Cyber Security MSc</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-300">100% online, part-time master's degree bridging technology and society in cybersecurity.</p>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-xs text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-clock text-purple-500 mr-2"></i>2 years part-time (20-25 hrs/week)
+                            </div>
+                            <div class="flex items-center text-xs text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-laptop text-purple-500 mr-2"></i>100% online flexibility
+                            </div>
+                            <div class="flex items-center text-xs text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-certificate text-purple-500 mr-2"></i>Research-led curriculum
+                            </div>
+                        </div>
+                        <a href="https://online.kcl.ac.uk/advanced-cyber-security-msc-online" target="_blank" class="block w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center py-3 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 font-semibold">
+                            <i class="fas fa-external-link-alt mr-2"></i>Download Brochure
+                        </a>
+                    </div>
+                </div>
+
+                <!-- EC-Council University -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-red-500 to-orange-600 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i class="fas fa-globe-americas text-6xl mb-4"></i>
+                            <h3 class="text-2xl font-bold">EC-Council University</h3>
+                            <p class="text-sm opacity-90">World-renowned cybersecurity specialists</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="mb-4">
+                            <div class="flex items-center mb-2">
+                                <span class="bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-300 px-2 py-1 rounded text-xs font-semibold mr-2">DEGREE</span>
+                                <span class="text-gray-500 text-xs">Fully Accredited</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 dark:text-white mb-2">Cybersecurity Degrees</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-300">Bachelor's and Master's programs with up to 5 industry certifications included.</p>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-xs text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-award text-red-500 mr-2"></i>Up to 5 certifications included
+                            </div>
+                            <div class="flex items-center text-xs text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-dollar-sign text-red-500 mr-2"></i>Scholarships available
+                            </div>
+                            <div class="flex items-center text-xs text-gray-600 dark:text-gray-400">
+                                <i class="fas fa-calendar text-red-500 mr-2"></i>Flexible online learning
+                            </div>
+                        </div>
+                        <a href="https://www.eccu.edu/cybersecurity-degrees" target="_blank" class="block w-full bg-gradient-to-r from-red-500 to-orange-600 text-white text-center py-3 rounded-lg hover:from-red-600 hover:to-orange-700 transition-all duration-300 font-semibold">
+                            <i class="fas fa-external-link-alt mr-2"></i>Explore Programs
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Learning Resources -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-8">
+                <h3 class="text-2xl font-bold text-center text-cyber-dark dark:text-white mb-6">More Learning Opportunities</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="flex items-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                        <div class="bg-blue-500 p-3 rounded-full mr-4">
+                            <i class="fas fa-graduation-cap text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 dark:text-white">Cisco Networking Academy</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-300">Introduction to Cybersecurity course</p>
+                            <a href="https://netacad.com/courses/introduction-to-cybersecurity" target="_blank" class="text-blue-500 hover:text-blue-600 text-sm font-medium">
+                                Start Free Course →
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex items-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                        <div class="bg-green-500 p-3 rounded-full mr-4">
+                            <i class="fas fa-code text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 dark:text-white">Hands-on Practice</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-300">Interactive labs and simulations</p>
+                            <button onclick="startInvestigation()" class="text-green-500 hover:text-green-600 text-sm font-medium">
+                                Try Our Investigation Lab →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Assistant Floating Button -->
+    <div id="aiAssistantButton" class="fixed bottom-6 right-6 z-50">
+        <button onclick="toggleAIChat()" class="bg-gradient-to-r from-cyan-500 to-blue-500 text-white p-4 rounded-full shadow-2xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 pulse-glow">
+            <i class="fas fa-robot text-2xl"></i>
+        </button>
+    </div>
+
+    <!-- AI Chat Modal -->
+    <div id="aiChatModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-2xl w-full max-w-2xl h-96 flex flex-col">
+            <!-- Chat Header -->
+            <div class="bg-gradient-to-r from-cyan-500 to-blue-500 text-white p-4 rounded-t-xl flex justify-between items-center">
+                <div class="flex items-center">
+                    <i class="fas fa-robot text-2xl mr-3"></i>
+                    <div>
+                        <h3 class="font-bold text-lg">CyberGuard AI Assistant</h3>
+                        <p class="text-xs opacity-90">Your cybersecurity expert companion</p>
+                    </div>
+                </div>
+                <button onclick="toggleAIChat()" class="text-white hover:text-gray-200">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Chat Messages -->
+            <div id="chatMessages" class="flex-1 overflow-y-auto p-4 space-y-4">
+                <div class="flex items-start">
+                    <div class="bg-gradient-to-r from-cyan-500 to-blue-500 p-2 rounded-full mr-3 flex-shrink-0">
+                        <i class="fas fa-robot text-white"></i>
+                    </div>
+                    <div class="bg-gray-100 dark:bg-gray-700 p-3 rounded-lg max-w-xs">
+                        <p class="text-sm">Hello! I'm your cybersecurity AI assistant. I can help you with cybersecurity questions, explain concepts, and guide you through security best practices. What would you like to know?</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Input -->
+            <div class="p-4 border-t border-gray-200 dark:border-gray-600">
+                <div class="flex space-x-2">
+                    <input type="text" id="chatInput" placeholder="Ask me about cybersecurity..." class="flex-1 p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 dark:bg-gray-700 dark:text-white text-base" onkeypress="handleChatKeyPress(event)">
+                    <button onclick="sendAIMessage()" class="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 flex items-center">
+                        <i class="fas fa-paper-plane mr-2"></i>Send
+                    </button>
+                </div>
+                <p class="text-xs text-gray-500 dark:text-gray-400 mt-2">
+                    <i class="fas fa-info-circle mr-1"></i>
+                    Ask about phishing, malware, password security, network protection, and more!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-cyber-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex items-center justify-center mb-6">
+                <i class="fas fa-shield-alt text-3xl text-cyber-blue mr-3"></i>
+                <h3 class="text-2xl font-bold">CyberGuard</h3>
+            </div>
+            <p class="text-gray-300 mb-4">
+                Empowering individuals and organizations with cybersecurity knowledge and best practices.
+            </p>
+            <p class="text-gray-400 text-sm">
+                Stay vigilant, stay secure. Remember: cybersecurity is everyone's responsibility.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+    <!-- Interactive Game Section -->
+    <section id="game" class="py-16 bg-white dark:bg-gray-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-cyber-dark dark:text-white">
+                    Interactive Cybersecurity Game
+                </h2>
+                <div class="w-24 h-1 bg-cyber-blue mx-auto mb-8"></div>
+                <p class="text-lg text-gray-600 dark:text-gray-300">
+                    Test your phishing detection skills! Can you identify which emails are legitimate and which are phishing attempts?
+                </p>
+            </div>
+
+            <div class="bg-gradient-to-br from-cyber-light to-white dark:from-gray-800 dark:to-gray-700 p-8 rounded-lg shadow-xl border border-gray-200 dark:border-gray-600">
+                <!-- Game Stats -->
+                <div class="flex justify-between items-center mb-6 p-4 bg-white dark:bg-gray-600 rounded-lg">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-cyber-blue" id="score">0</div>
+                        <div class="text-sm text-gray-600 dark:text-gray-300">Score</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-cyber-teal" id="streak">0</div>
+                        <div class="text-sm text-gray-600 dark:text-gray-300">Streak</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-green-500" id="correct">0</div>
+                        <div class="text-sm text-gray-600 dark:text-gray-300">Correct</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-red-500" id="incorrect">0</div>
+                        <div class="text-sm text-gray-600 dark:text-gray-300">Incorrect</div>
+                    </div>
+                </div>
+
+                <!-- Game Content -->
+                <div id="gameContent" class="min-h-96">
+                    <!-- Start Screen -->
+                    <div id="startScreen" class="text-center">
+                        <div class="mb-8">
+                            <i class="fas fa-gamepad text-6xl text-cyber-blue mb-4"></i>
+                            <h3 class="text-2xl font-bold text-cyber-dark dark:text-white mb-4">Phishing Detection Challenge</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-6">
+                                You'll see various emails. Decide whether each one is <strong>legitimate</strong> or a <strong>phishing attempt</strong>. 
+                                Pay attention to sender addresses, urgency, links, and grammar!
+                            </p>
+                        </div>
+                        <button onclick="startGame()" class="bg-cyber-blue text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-cyber-dark transition-all duration-300 pulse-glow">
+                            Start Game
+                        </button>
+                    </div>
+
+                    <!-- Game Screen -->
+                    <div id="gameScreen" class="hidden">
+                        <div class="bg-white dark:bg-gray-600 rounded-lg p-6 mb-6 shadow-lg">
+                            <div class="border-b border-gray-200 dark:border-gray-500 pb-4 mb-4">
+                                <div class="text-sm text-gray-500 dark:text-gray-400 mb-2">From: <span id="emailFrom" class="font-mono"></span></div>
+                                <div class="text-sm text-gray-500 dark:text-gray-400 mb-2">To: <span id="emailTo" class="font-mono">you@company.com</span></div>
+                                <div class="text-lg font-semibold text-gray-800 dark:text-gray-200" id="emailSubject"></div>
+                            </div>
+                            <div class="text-gray-700 dark:text-gray-300 leading-relaxed" id="emailBody"></div>
+                        </div>
+
+                        <div class="flex justify-center space-x-6">
+                            <button onclick="makeChoice(true)" class="bg-green-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-600 transition-all duration-300 flex items-center">
+                                <i class="fas fa-check mr-2"></i>Legitimate
+                            </button>
+                            <button onclick="makeChoice(false)" class="bg-red-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-600 transition-all duration-300 flex items-center">
+                                <i class="fas fa-times mr-2"></i>Phishing
+                            </button>
+                        </div>
+                    </div>
+
+        // AI CHAT ASSISTANT FUNCTIONALITY
+        let isAIChatOpen = false;
+
+        function toggleAIChat() {
+            const modal = document.getElementById('aiChatModal');
+            isAIChatOpen = !isAIChatOpen;
+            
+            if (isAIChatOpen) {
+                modal.classList.remove('hidden');
+                document.getElementById('chatInput').focus();
+            } else {
+                modal.classList.add('hidden');
+            }
+        }
+
+        function handleChatKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendAIMessage();
+            }
+        }
+
+        async function sendAIMessage() {
+            const input = document.getElementById('chatInput');
+            const message = input.value.trim();
+            
+            if (!message) return;
+            
+            // Clear input
+            input.value = '';
+            
+            // Add user message to chat
+            addMessageToChat(message, 'user');
+            
+            // Show typing indicator
+            const typingId = addTypingIndicator();
+            
+            try {
+                // Get AI response (using a simple cybersecurity knowledge base)
+                const response = await getAIResponse(message);
+                
+                // Remove typing indicator
+                removeTypingIndicator(typingId);
+                
+                // Add AI response to chat
+                addMessageToChat(response, 'ai');
+                
+            } catch (error) {
+                // Remove typing indicator
+                removeTypingIndicator(typingId);
+                
+                // Add error message
+                addMessageToChat('Sorry, I encountered an error. Please try asking another cybersecurity question!', 'ai');
+            }
+        }
+
+        function addMessageToChat(message, sender) {
+            const chatMessages = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'flex items-start';
+            
+            if (sender === 'user') {
+                messageDiv.innerHTML = `
+                    <div class="bg-cyan-500 p-2 rounded-full mr-3 flex-shrink-0">
+                        <i class="fas fa-user text-white"></i>
+                    </div>
+                    <div class="bg-cyan-100 dark:bg-cyan-900/30 p-3 rounded-lg max-w-xs">
+                        <p class="text-sm">${message}</p>
+                    </div>
+                `;
+            } else {
+                messageDiv.innerHTML = `
+                    <div class="bg-gradient-to-r from-cyan-500 to-blue-500 p-2 rounded-full mr-3 flex-shrink-0">
+                        <i class="fas fa-robot text-white"></i>
+                    </div>
+                    <div class="bg-gray-100 dark:bg-gray-700 p-3 rounded-lg max-w-xs">
+                        <p class="text-sm">${message}</p>
+                    </div>
+                `;
+            }
+            
+            chatMessages.appendChild(messageDiv);
+            
+            // Scroll to bottom
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function addTypingIndicator() {
+            const chatMessages = document.getElementById('chatMessages');
+            const typingDiv = document.createElement('div');
+            const typingId = 'typing-' + Date.now();
+            typingDiv.id = typingId;
+            typingDiv.className = 'flex items-start';
+            
+            typingDiv.innerHTML = `
+                <div class="bg-gradient-to-r from-cyan-500 to-blue-500 p-2 rounded-full mr-3 flex-shrink-0">
+                    <i class="fas fa-robot text-white"></i>
+                </div>
+                <div class="bg-gray-100 dark:bg-gray-700 p-3 rounded-lg max-w-xs">
+                    <p class="text-sm">
+                        <i class="fas fa-ellipsis-h animate-pulse"></i> Analyzing your question...
+                    </p>
+                </div>
+            `;
+            
+            chatMessages.appendChild(typingDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+            
+            return typingId;
+        }
+
+        function removeTypingIndicator(typingId) {
+            const typingDiv = document.getElementById(typingId);
+            if (typingDiv) {
+                typingDiv.remove();
+            }
+        }
+
+        async function getAIResponse(message) {
+            // Advanced AI-like cybersecurity response system
+            const lowerMessage = message.toLowerCase();
+            
+            // Cybersecurity knowledge patterns with intelligent matching
+            const knowledgeBase = {
+                // Greetings and general
+                greetings: {
+                    patterns: ['hello', 'hi', 'hey', 'greetings', 'good morning', 'good afternoon', 'good evening'],
+                    responses: [
+                        "Hello! 👋 I'm CyberGuard AI, your dedicated cybersecurity assistant. I'm here to help you stay safe in the digital world. What security topic would you like to explore today?",
+                        "Hi there! 🛡️ Welcome to CyberGuard AI. I specialize in helping people understand and implement strong cybersecurity practices. How can I protect you today?",
+                        "Greetings! 🔒 I'm your cybersecurity expert assistant. Whether you need help with passwords, phishing, malware, or network security - I've got you covered!"
+                    ]
+                },
+                
+                help: {
+                    patterns: ['help', 'what can you do', 'capabilities', 'assist', 'guide'],
+                    responses: [
+                        "I'm here to help with all aspects of cybersecurity! 🚀 I can assist with:\n\n🔐 **Password Security & MFA**\n📧 **Email & Phishing Protection**\n🦠 **Malware & Ransomware Defense**\n🌐 **Network & WiFi Security**\n💾 **Data Backup & Recovery**\n📱 **Mobile & IoT Security**\n☁️ **Cloud Security Best Practices**\n🚨 **Incident Response & Recovery**\n\nWhat specific area interests you most?"
+                    ]
+                },
+
+                // Password Security
+                passwords: {
+                    patterns: ['password', 'passwords', 'passphrase', 'login', 'credential', 'authentication'],
+                    responses: [
+                        "🔐 **Strong Password Security Guide:**\n\n✅ **Length**: Use 12+ characters minimum\n✅ **Complexity**: Mix uppercase, lowercase, numbers, symbols\n✅ **Uniqueness**: Different password for each account\n✅ **Unpredictability**: Avoid personal info, dictionary words\n\n🛡️ **Pro Tips:**\n• Use a password manager (1Password, Bitwarden)\n• Try passphrases: 'Coffee@Beach!2024$Sunrise'\n• Enable 2FA on all critical accounts\n• Update breached passwords immediately\n\n💡 Want to test password strength? Most password managers have built-in generators and strength meters!"
+                    ]
+                },
+
+                '2fa': {
+                    patterns: ['2fa', 'two factor', 'mfa', 'multi-factor', 'authenticator', 'verification'],
+                    responses: [
+                        "🛡️ **Multi-Factor Authentication (MFA/2FA) Guide:**\n\n**Why It Matters:** Adds 99.9% protection against account takeovers!\n\n🥇 **Best Methods (Ranked):**\n1️⃣ **Hardware Keys** (YubiKey, Google Titan)\n2️⃣ **Authenticator Apps** (Google Authenticator, Authy)\n3️⃣ **SMS Codes** (least secure, but better than nothing)\n\n⚡ **Setup Priority:**\n• Email accounts (Gmail, Outlook)\n• Banking & financial services\n• Social media platforms\n• Work accounts & cloud storage\n\n💡 **Pro Tip:** Keep backup codes in a secure location!"
+                    ]
+                },
+
+                // Phishing & Email Security
+                phishing: {
+                    patterns: ['phishing', 'phish', 'suspicious email', 'fake email', 'scam email', 'email security'],
+                    responses: [
+                        "🎣 **Phishing Detection & Prevention:**\n\n🚨 **Red Flags to Watch:**\n• Urgent language ('Act now!' 'Account suspended!')\n• Generic greetings ('Dear Customer')\n• Suspicious sender addresses\n• Mismatched URLs (hover to check)\n• Unexpected attachments\n• Grammar/spelling errors\n\n🛡️ **Protection Steps:**\n✅ Verify sender through official channels\n✅ Never click suspicious links\n✅ Type URLs manually\n✅ Use email filters\n✅ Report phishing attempts\n\n💡 **Remember:** Legitimate companies rarely ask for sensitive info via email!"
+                    ]
+                },
+
+                email: {
+                    patterns: ['email', 'gmail', 'outlook', 'mail'],
+                    responses: [
+                        "📧 **Email Security Best Practices:**\n\n🔒 **Account Security:**\n• Enable 2FA immediately\n• Use app-specific passwords\n• Review login activity regularly\n• Set up forwarding rules carefully\n\n🛡️ **Safe Email Habits:**\n• Verify sender before clicking links\n• Download attachments cautiously\n• Use encrypted email for sensitive data\n• Keep software updated\n\n⚠️ **Warning Signs:**\n• Unexpected password reset emails\n• Unknown login notifications\n• Suspicious forwarding rules\n• Missing emails\n\n💡 **Pro Tip:** Use separate emails for banking, shopping, and social accounts!"
+                    ]
+                },
+
+                // Malware & Viruses
+                malware: {
+                    patterns: ['malware', 'virus', 'trojan', 'spyware', 'adware', 'infected'],
+                    responses: [
+                        "🦠 **Malware Protection & Removal Guide:**\n\n🛡️ **Prevention (Best Defense):**\n• Keep OS & software updated\n• Use reputable antivirus (Windows Defender, Bitdefender)\n• Avoid suspicious downloads\n• Enable real-time protection\n• Regular system scans\n\n🚨 **Infection Signs:**\n• Slow computer performance\n• Unexpected pop-ups\n• Browser redirects\n• Unknown programs running\n• High network activity\n\n⚡ **Immediate Action:**\n1. Disconnect from internet\n2. Boot in Safe Mode\n3. Run full antivirus scan\n4. Use Malwarebytes for deep cleaning\n5. Change all passwords after cleaning"
+                    ]
+                },
+
+                ransomware: {
+                    patterns: ['ransomware', 'ransom', 'encrypted files', 'crypto locker'],
+                    responses: [
+                        "🔒 **Ransomware Defense Strategy:**\n\n🛡️ **Prevention (Critical):**\n• **3-2-1 Backup Rule**: 3 copies, 2 different media, 1 offsite\n• Keep offline/air-gapped backups\n• Update OS & software regularly\n• Email attachment caution\n• Network segmentation\n\n🚨 **If Hit by Ransomware:**\n1. **DON'T PAY** the ransom\n2. Disconnect from network immediately\n3. Document everything\n4. Contact authorities\n5. Restore from clean backups\n\n💾 **Backup Solutions:**\n• External drives (disconnect when not in use)\n• Cloud storage with versioning\n• Network-attached storage (NAS)\n\n⚡ Most ransomware attacks are preventable with proper backups!"
+                    ]
+                },
+
+                // Network Security
+                network: {
+                    patterns: ['network', 'wifi', 'router', 'firewall', 'vpn'],
+                    responses: [
+                        "🌐 **Network Security Essentials:**\n\n🔒 **WiFi Security:**\n• Use WPA3 (or WPA2 minimum)\n• Strong, unique passwords\n• Change default admin credentials\n• Hide SSID if desired\n• Guest network for visitors\n• Regular firmware updates\n\n🛡️ **Router Hardening:**\n• Disable WPS\n• Use strong admin passwords\n• Enable firewall\n• Disable unnecessary services\n• Monitor connected devices\n\n🔐 **VPN Benefits:**\n• Encrypts internet traffic\n• Protects on public WiFi\n• Masks IP address\n• Bypasses geo-restrictions\n\n💡 **Recommended VPNs:** NordVPN, ExpressVPN, Surfshark"
+                    ]
+                },
+
+                vpn: {
+                    patterns: ['vpn', 'virtual private network', 'tunneling'],
+                    responses: [
+                        "🔐 **VPN (Virtual Private Network) Guide:**\n\n**What It Does:**\n• Encrypts all internet traffic\n• Hides your real IP address\n• Protects data on public WiFi\n• Bypasses censorship/geo-blocks\n\n🏆 **Top VPN Services:**\n• **NordVPN** - Great security features\n• **ExpressVPN** - Fast & reliable\n• **Surfshark** - Budget-friendly\n• **ProtonVPN** - Strong privacy focus\n\n⚠️ **Avoid Free VPNs** - They often:\n• Log your data\n• Inject ads\n• Have slow speeds\n• Poor security\n\n💡 **When to Use:**\n• Public WiFi networks\n• Sensitive work activities\n• Traveling abroad\n• Enhanced privacy needs"
+                    ]
+                },
+
+                // Data Protection
+                backup: {
+                    patterns: ['backup', 'data recovery', 'lost files', 'data protection'],
+                    responses: [
+                        "💾 **Data Backup Strategy (3-2-1 Rule):**\n\n**The Golden Rule:**\n🔢 **3** copies of important data\n📀 **2** different storage media types\n☁️ **1** copy stored offsite\n\n🛡️ **Backup Solutions:**\n• **Cloud**: Google Drive, Dropbox, iCloud\n• **External Drives**: USB, portable HDDs\n• **Network Storage**: NAS devices\n• **Automated**: Time Machine, Windows Backup\n\n⚡ **Backup Schedule:**\n• Critical files: Daily\n• Important files: Weekly\n• System images: Monthly\n• Test restores: Quarterly\n\n💡 **Pro Tip:** Ransomware can't encrypt offline backups!"
+                    ]
+                },
+
+                encryption: {
+                    patterns: ['encryption', 'encrypt', 'decrypt', 'crypto'],
+                    responses: [
+                        "🔐 **Encryption Guide:**\n\n**What Is It?**\nTransforms readable data into scrambled code that only authorized parties can decode.\n\n🛡️ **Types You Should Use:**\n• **Full-Disk**: BitLocker (Windows), FileVault (Mac)\n• **File/Folder**: 7-Zip, VeraCrypt\n• **Communication**: Signal, WhatsApp, ProtonMail\n• **Web**: Always look for HTTPS (🔒)\n\n🔑 **Encryption Standards:**\n• **AES-256**: Gold standard for file encryption\n• **RSA**: For secure key exchange\n• **End-to-End**: For messaging apps\n\n💡 **Best Practices:**\n• Encrypt sensitive files\n• Use strong passwords/passphrases\n• Keep encryption keys secure\n• Regular security updates"
+                    ]
+                },
+
+                // Social Engineering
+                'social engineering': {
+                    patterns: ['social engineering', 'manipulation', 'pretexting', 'baiting', 'tailgating'],
+                    responses: [
+                        "🎭 **Social Engineering Defense:**\n\n**What It Is:**\nPsychological manipulation to trick people into revealing information or performing actions that compromise security.\n\n🚨 **Common Tactics:**\n• **Pretexting**: Fake scenarios to gain trust\n• **Baiting**: Offering something tempting\n• **Quid Pro Quo**: 'Favor for favor' exchanges\n• **Tailgating**: Following someone into secure areas\n• **Authority**: Impersonating officials\n\n🛡️ **Protection Strategies:**\n• Verify identity through official channels\n• Be skeptical of unsolicited contact\n• Never give sensitive info over phone/email\n• Question unusual requests\n• Trust your instincts\n\n💡 **Remember:** Attackers exploit human nature, not just technology!"
+                    ]
+                },
+
+                // Mobile Security
+                mobile: {
+                    patterns: ['mobile', 'phone', 'smartphone', 'android', 'iphone', 'ios'],
+                    responses: [
+                        "📱 **Mobile Security Essentials:**\n\n🔒 **Device Protection:**\n• Strong lock screen (PIN/password/biometric)\n• Auto-lock after short timeout\n• Enable remote wipe capability\n• Regular OS updates\n• Avoid public charging stations\n\n📲 **App Security:**\n• Download from official stores only\n• Review app permissions carefully\n• Uninstall unused apps\n• Keep apps updated\n• Use mobile antivirus if needed\n\n🌐 **Network Safety:**\n• Avoid public WiFi for sensitive tasks\n• Use mobile VPN\n• Turn off auto-connect to WiFi\n• Disable Bluetooth when not needed\n\n💡 **Pro Tips:** Enable Find My Device and regular backups!"
+                    ]
+                },
+
+                // Cloud Security
+                cloud: {
+                    patterns: ['cloud', 'aws', 'azure', 'google cloud', 'dropbox', 'onedrive'],
+                    responses: [
+                        "☁️ **Cloud Security Best Practices:**\n\n🔐 **Account Security:**\n• Enable 2FA on all cloud accounts\n• Use strong, unique passwords\n• Regular access reviews\n• Monitor login activity\n• Set up alerts for suspicious activity\n\n🛡️ **Data Protection:**\n• Encrypt sensitive files before upload\n• Understand sharing permissions\n• Regular permission audits\n• Use business accounts for work data\n• Backup critical cloud data locally\n\n⚠️ **Shared Responsibility:**\n• **Cloud Provider**: Infrastructure security\n• **You**: Data, access, and configuration\n\n💡 **Popular Secure Options:** ProtonDrive, pCloud Crypto, SpiderOak"
+                    ]
+                },
+
+                // Incident Response
+                incident: {
+                    patterns: ['incident', 'breach', 'attack', 'compromise', 'hacked', 'response'],
+                    responses: [
+                        "🚨 **Incident Response Plan:**\n\n**Immediate Actions (First 30 mins):**\n1️⃣ **Contain**: Disconnect affected systems\n2️⃣ **Assess**: Determine scope of damage\n3️⃣ **Document**: Record everything\n4️⃣ **Notify**: Inform relevant parties\n5️⃣ **Preserve**: Collect evidence\n\n🔍 **Investigation Phase:**\n• Identify attack vector\n• Assess data impact\n• Determine root cause\n• Timeline reconstruction\n\n🛠️ **Recovery Steps:**\n• Remove malware/threats\n• Patch vulnerabilities\n• Restore from clean backups\n• Monitor for reinfection\n• Update security measures\n\n📞 **When to Call Experts:** Complex attacks, legal requirements, or if overwhelmed"
+                    ]
+                },
+
+                // Updates & Patches
+                updates: {
+                    patterns: ['update', 'patch', 'software update', 'security update'],
+                    responses: [
+                        "🔄 **Software Update Strategy:**\n\n**Why Updates Matter:**\nSecurity patches fix vulnerabilities that attackers actively exploit!\n\n⚡ **Update Priority (High to Low):**\n1️⃣ **Operating System** (Windows, macOS, Linux)\n2️⃣ **Browsers** (Chrome, Firefox, Safari)\n3️⃣ **Security Software** (Antivirus, firewall)\n4️⃣ **Critical Apps** (Email, PDF readers)\n5️⃣ **Other Software**\n\n🛡️ **Best Practices:**\n• Enable automatic updates when safe\n• Test critical updates in non-production\n• Update firmware (routers, IoT devices)\n• Remove unused software\n• Subscribe to security bulletins\n\n💡 **Patch Tuesday:** Microsoft releases updates second Tuesday of each month"
+                    ]
+                },
+
+                // IoT Security
+                iot: {
+                    patterns: ['iot', 'smart home', 'smart device', 'internet of things', 'alexa', 'google home'],
+                    responses: [
+                        "🏠 **IoT & Smart Device Security:**\n\n🔒 **Initial Setup:**\n• Change default passwords immediately\n• Update firmware before use\n• Enable automatic updates\n• Review privacy settings\n• Create separate IoT network\n\n🛡️ **Ongoing Security:**\n• Regular firmware updates\n• Monitor device behavior\n• Review connected apps/services\n• Limit data sharing\n• Disable unnecessary features\n\n⚠️ **Common Vulnerabilities:**\n• Default/weak passwords\n• Outdated firmware\n• Unencrypted communications\n• Poor authentication\n\n💡 **Network Segmentation:** Keep IoT devices on separate network from computers/phones"
+                    ]
+                },
+
+                // Zero Trust
+                'zero trust': {
+                    patterns: ['zero trust', 'ztna', 'never trust always verify'],
+                    responses: [
+                        "🔐 **Zero Trust Security Model:**\n\n**Core Principle:** 'Never Trust, Always Verify'\n\n🛡️ **Key Components:**\n• **Identity Verification**: Multi-factor authentication\n• **Device Verification**: Ensure device compliance\n• **Least Privilege**: Minimal necessary access\n• **Micro-segmentation**: Isolate network zones\n• **Continuous Monitoring**: Real-time threat detection\n\n🏢 **Implementation Steps:**\n1. Identify and classify data\n2. Map data flows\n3. Design micro-perimeters\n4. Deploy monitoring tools\n5. Enforce policies\n\n💡 **Benefits:**\n• Reduced attack surface\n• Better breach containment\n• Improved compliance\n• Enhanced visibility"
+                    ]
+                }
+            };
+
+            // Smart pattern matching with context awareness
+            let bestMatch = null;
+            let bestScore = 0;
+
+            for (const [category, data] of Object.entries(knowledgeBase)) {
+                for (const pattern of data.patterns) {
+                    const score = calculateMatchScore(lowerMessage, pattern);
+                    if (score > bestScore) {
+                        bestScore = score;
+                        bestMatch = data;
+                    }
+                }
+            }
+
+            // If we found a good match (score > 0.3), use it
+            if (bestMatch && bestScore > 0.3) {
+                const responses = bestMatch.responses;
+                let response = responses[Math.floor(Math.random() * responses.length)];
+                
+                // Add personalized suggestions
+                const suggestions = [
+                    '\n\n💡 **Want hands-on practice?** Try our Investigation Lab game to test your skills!',
+                    '\n\n🎓 **Ready for formal training?** Check out our Learning Hubs for professional courses!',
+                    '\n\n🔍 **Test your knowledge** with our interactive cybersecurity scenarios!',
+                    '\n\n⚡ **Explore more** cybersecurity topics in our comprehensive guide above!'
+                ];
+                
+                // Add suggestion 40% of the time
+                if (Math.random() < 0.4) {
+                    response += suggestions[Math.floor(Math.random() * suggestions.length)];
+                }
+                
+                return response;
+            }
+
+            // Fallback for unmatched queries
+            return generateContextualResponse(lowerMessage);
+        }
+
+        function calculateMatchScore(message, pattern) {
+            // Advanced scoring algorithm
+            const words = message.split(/\s+/);
+            const patternWords = pattern.split(/\s+/);
+            
+            let score = 0;
+            
+            // Exact phrase match gets highest score
+            if (message.includes(pattern)) {
+                score += 1.0;
+            }
+            
+            // Word-by-word matching
+            for (const patternWord of patternWords) {
+                for (const word of words) {
+                    if (word === patternWord) {
+                        score += 0.8;
+                    } else if (word.includes(patternWord) || patternWord.includes(word)) {
+                        score += 0.5;
+                    }
+                }
+            }
+            
+            // Normalize by pattern length
+            return score / patternWords.length;
+        }
+
+        function generateContextualResponse(message) {
+            // Smart fallback based on message content
+            if (message.includes('how') || message.includes('what') || message.includes('why')) {
+                return `🤔 Great question about cybersecurity! While I didn't find a specific match in my knowledge base, here are some key security principles to consider:
+
+🔒 **Fundamental Security Layers:**
+• **Strong Authentication** - Use unique passwords + 2FA
+• **Keep Software Updated** - Install security patches promptly  
+• **Email Vigilance** - Verify before clicking links/attachments
+• **Regular Backups** - Protect against ransomware & data loss
+• **Network Security** - Secure WiFi & consider VPN usage
+
+💡 **For specific guidance:** Try rephrasing your question with terms like "password security," "phishing protection," or "malware defense."
+
+🎓 **Want expert training?** Our Learning Hubs offer professional cybersecurity courses from top institutions!`;
+            }
+            
+            if (message.includes('help') || message.includes('need')) {
+                return `🛡️ I'm here to help with cybersecurity! I can provide expert guidance on:
+
+🔐 **Authentication & Access**
+📧 **Email & Phishing Security**  
+🦠 **Malware & Ransomware Protection**
+🌐 **Network & WiFi Security**
+💾 **Data Backup & Recovery**
+📱 **Mobile Device Security**
+☁️ **Cloud Security Practices**
+🚨 **Incident Response**
+
+💬 **Just ask me about any of these topics!** For example:
+• "How do I create strong passwords?"
+• "What are signs of phishing emails?"
+• "How do I protect against ransomware?"
+
+🎯 **Ready for hands-on learning?** Try our Investigation Lab or explore our Learning Hubs!`;
+            }
+            
+            return `🤖 I'm CyberGuard AI, your cybersecurity expert! I specialize in helping people stay safe online.
+
+🎯 **I can help you with:**
+• Password security and authentication
+• Phishing and email protection
+• Malware and ransomware defense
+• Network and WiFi security
+• Data backup and recovery
+• Mobile and IoT security
+• Incident response planning
+
+💬 **Try asking specific questions like:**
+"How do I secure my WiFi?" or "What is two-factor authentication?"
+
+🚀 **Want to practice?** Check out our Investigation Lab game or explore professional courses in our Learning Hubs section!`;
+        }
+
+        // Initialize AI chat when page loads
+        window.addEventListener('load', () => {
+            // Add some initial state
+            investigationState.magic8BallShown = false;
+        });
+    </script>
+
+
+</body>
+</html>
